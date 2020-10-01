@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./App.css";
+import MacbookScroll from "./components/MacbookScroll";
+import Header from "./components/Header";
+
+import { gsap } from "gsap/all";
 
 function App() {
+  // let app = useRef(null);
+
+  useEffect(() => {
+    // gsap.to(app, { duration: 0, css: { visibility: "visible" } });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      // ref={(el) => (app = el)}
+      className="App"
+    >
+      <Header />
+      <MacbookScroll />
     </div>
   );
 }

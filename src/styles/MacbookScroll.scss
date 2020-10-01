@@ -1,0 +1,56 @@
+.macbook-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.macbook-container {
+  visibility: hidden;
+  position: absolute;
+  top: 118px;
+  // top: calc(52px+66px);
+  background: white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.macbook-title {
+  width: calc(1096px / 1.1);
+  // width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  z-index: 20;
+  line-height: 1;
+  padding-left: 4rem;
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    padding-left: 0.4em;
+    margin-top: 8px;
+    font-size: 110px;
+  }
+}
+
+.macbook-canvas {
+  width: calc(1096px / 1.1);
+  height: calc(900px / 1.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// canvas {
+//     max-width: calc(1096px / 1.51381);
+//     min-height: calc(900px / 1.51381);
+//     width: 125vh;
+//     height: auto;
+//     position: absolute;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     top: 10vh;
+// }
