@@ -1,26 +1,9 @@
 .App {
-  visibility: hidden;
   text-align: center;
   width: 100vw;
-  height: 200vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-}
-
-.circle {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background-color: #FDCF51;
-  margin: 50px;
-}
-
-.circle.red {
-  background-color: #FD5151;
-}
-
-.circle.blue {
-  background-color: #51A0FD;
+  overflow: auto;
 }

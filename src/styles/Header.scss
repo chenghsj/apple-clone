@@ -1,7 +1,11 @@
+:root {
+    --r-globalnav-height: 48px;
+}
+
 .header-container {
     background-color: #333333;
     width: 100%;
-    height: 52px;
+    height: var(--r-globalnav-height);
     position: absolute;
     top: 0;
     left: 0;
