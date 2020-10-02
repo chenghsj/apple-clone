@@ -12,6 +12,7 @@ const currentFrame = (index) =>
 
 function MacbookScroll() {
   let localNavContainer = useRef(null);
+  let macbookContainer = useRef(null);
   let macbookTitle = useRef(null);
   let macbookTitleH1 = useRef(null);
   let macbookTitleH2 = useRef(null);
@@ -65,12 +66,13 @@ function MacbookScroll() {
     }
     let macbookContainerAnim = gsap.timeline({
       scrollTrigger: {
-        trigger: macbookCanvas,
-        start: "top +=90px",
-        end: "bottom +=50%",
+        trigger: macbookContainer,
+        start: "top +=120px",
+        end: "bottom-=40% +=50%",
         scrub: 0.6,
         markers: true,
         pin: true,
+        pinSpacing: false,
       },
     });
     macbookContainerAnim
@@ -118,7 +120,7 @@ function MacbookScroll() {
           </div>
         </div>
       </div>
-      <div className="macbook-container">
+      <div ref={(el) => (macbookContainer = el)} className="macbook-container">
         <div ref={(el) => (macbookTitle = el)} className="macbook-title">
           <h1 ref={(el) => (macbookTitleH1 = el)}>Macbook Pro</h1>
           <h2 ref={(el) => (macbookTitleH2 = el)}>
@@ -133,14 +135,14 @@ function MacbookScroll() {
           height={900}
           ref={(el) => (macbookCanvas = el)}
         />
-      </div>
-      <div className="section-content">
-        <p>
-          全新 MacBook&nbsp;Pro
-          專為挑戰極限、改變世界的你而設計，是我們迄今所打造最強大的筆記型電腦。配備引人入勝的
-          16 吋 Retina 顯示器、超高速處理器、新一代繪圖處理、MacBook&nbsp;Pro
-          歷來最大的電池容量，以及全新巧控鍵盤與龐大的儲存容量，這正是為強者而生，最極致的專業筆電。
-        </p>
+        <div className="section-content">
+          <p>
+            全新 MacBook&nbsp;Pro
+            專為挑戰極限、改變世界的你而設計，是我們迄今所打造最強大的筆記型電腦。配備引人入勝的
+            16 吋 Retina 顯示器、超高速處理器、新一代繪圖處理、MacBook&nbsp;Pro
+            歷來最大的電池容量，以及全新巧控鍵盤與龐大的儲存容量，這正是為強者而生，最極致的專業筆電。
+          </p>
+        </div>
       </div>
     </div>
   );
