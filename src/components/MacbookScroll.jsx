@@ -17,8 +17,10 @@ function MacbookScroll() {
   let macbookTitleH1 = useRef(null);
   let macbookTitleH2 = useRef(null);
   let macbookCanvas = useRef(null);
+  let scrollContent = useRef(null);
 
   useEffect(() => {
+    gsap.to(".macbook-scroll", { visibility: "visible" });
     //landing animation
     let landingAnim = gsap.timeline();
     landingAnim
@@ -28,13 +30,19 @@ function MacbookScroll() {
           y: 40,
           opacity: 0,
         },
-        { y: 0, opacity: 1, duration: 1.5, stagger: 0.15 }
+        { y: 0, opacity: 1, duration: 1.5, stagger: 0.2 }
       )
       .fromTo(
         macbookCanvas,
         { opacity: 0 },
         { opacity: 1, duration: 1.5 },
         "<0.1"
+      )
+      .fromTo(
+        scrollContent,
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.5 },
+        0
       );
     //local Navbar
     let localNavAnim = gsap.timeline();
@@ -70,7 +78,7 @@ function MacbookScroll() {
         start: "top +=120px",
         end: "bottom-=40% +=50%",
         scrub: 0.6,
-        markers: true,
+        // markers: true,
         pin: true,
         pinSpacing: false,
       },
@@ -135,7 +143,10 @@ function MacbookScroll() {
           height={900}
           ref={(el) => (macbookCanvas = el)}
         />
-        <div className="section-content">
+        <div
+          ref={(el) => (scrollContent = el)}
+          className="scroll-section-content"
+        >
           <p>
             全新 MacBook&nbsp;Pro
             專為挑戰極限、改變世界的你而設計，是我們迄今所打造最強大的筆記型電腦。配備引人入勝的
