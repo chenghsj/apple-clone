@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/apple-clone/static/css/main.5ab8d645.chunk.css",
-    "main.js": "/apple-clone/static/js/main.615c0131.chunk.js",
-    "main.js.map": "/apple-clone/static/js/main.615c0131.chunk.js.map",
+    "main.css": "/apple-clone/static/css/main.3d2416d9.chunk.css",
+    "main.js": "/apple-clone/static/js/main.77c53943.chunk.js",
+    "main.js.map": "/apple-clone/static/js/main.77c53943.chunk.js.map",
     "runtime-main.js": "/apple-clone/static/js/runtime-main.775e4c48.js",
     "runtime-main.js.map": "/apple-clone/static/js/runtime-main.775e4c48.js.map",
     "static/js/2.d9154bda.chunk.js": "/apple-clone/static/js/2.d9154bda.chunk.js",
     "static/js/2.d9154bda.chunk.js.map": "/apple-clone/static/js/2.d9154bda.chunk.js.map",
     "index.html": "/apple-clone/index.html",
-    "precache-manifest.a1a164d0e9a3eab3ee2ecfc5a6e7aae7.js": "/apple-clone/precache-manifest.a1a164d0e9a3eab3ee2ecfc5a6e7aae7.js",
+    "precache-manifest.7b53fd7918f789b6ca4d7f4c681c25bb.js": "/apple-clone/precache-manifest.7b53fd7918f789b6ca4d7f4c681c25bb.js",
     "service-worker.js": "/apple-clone/service-worker.js",
-    "static/css/main.5ab8d645.chunk.css.map": "/apple-clone/static/css/main.5ab8d645.chunk.css.map",
+    "static/css/main.3d2416d9.chunk.css.map": "/apple-clone/static/css/main.3d2416d9.chunk.css.map",
     "static/js/2.d9154bda.chunk.js.LICENSE.txt": "/apple-clone/static/js/2.d9154bda.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.775e4c48.js",
     "static/js/2.d9154bda.chunk.js",
-    "static/css/main.5ab8d645.chunk.css",
-    "static/js/main.615c0131.chunk.js"
+    "static/css/main.3d2416d9.chunk.css",
+    "static/js/main.77c53943.chunk.js"
   ]
 }
