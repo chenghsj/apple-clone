@@ -1,9 +1,50 @@
 .App {
   text-align: center;
   width: 100vw;
-  height: 500vh;
+  /* height: 500vh; */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   overflow: auto
+}
+
+.section {
+  padding: 190px 0;
+}
+
+.section-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+}
+
+.no-pad-top {
+  padding-top: 0;
+}
+
+.section-headline {
+  margin-bottom: 100px;
+}
+
+.typography-section-headline {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.typography-section-headline.section-eyebrow {
+  color: #acacac;
+}
+
+.section-retina .section-headline {
+  margin-right: -32px;
+}
+
+.nowrap {
+  display: inline-block;
+  text-decoration: inherit;
+  white-space: nowrap;
 }

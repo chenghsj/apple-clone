@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/MacbookFeatures.scss";
 
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap, ScrollTrigger, Power2 } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 function MacbookFeatures() {
@@ -10,35 +10,28 @@ function MacbookFeatures() {
   let featuresVideo = useRef(null);
 
   useEffect(() => {
-    console.log(featuresRef.current);
+    // console.log(featuresRef.current);
     let features = featuresRef.current;
     let featuresAnim = gsap.timeline({
       scrollTrigger: {
         trigger: featuresContent,
-        start: "top-=50% center",
+        start: "top-=40% center-=5%",
         end: "bottom bottom",
-        scrub: 0.6,
-        markers: true,
+        scrub: 0.5,
+        // markers: true,
       },
     });
     featuresAnim
       .fromTo(
         features,
         { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.5 }
+        { y: 0, opacity: 1, stagger: 1, ease: Power2.out, duration: 2 }
       )
-      .from(
-        featuresVideo,
-        {
-          onEnter: () => featuresVideo.play(),
-          onRefresh: () => featuresVideo.play(),
-        },
-        0
-      );
-  });
+      .to(featuresVideo, { onEnter: () => featuresVideo.play() }, 0);
+  }, []);
 
   return (
-    <section className="section-features">
+    <section className="section-features section no-pad-top">
       <div ref={(el) => (featuresContent = el)} className="features-content">
         {FeaturesList.map((feature, outerIndex) => {
           return (
@@ -48,10 +41,12 @@ function MacbookFeatures() {
               className="features-row"
             >
               {feature.map((item, innerIndex) => {
-                return innerIndex % 2 === 0 ? (
+                let outer = outerIndex === 2;
+                let inner = innerIndex % 2 === 0;
+                return (
                   <div
                     key={`feature-item-${innerIndex}`}
-                    className="features-item-left"
+                    className={`features-item-${inner ? "left" : "right"}`}
                   >
                     <p className="features-label">
                       <span className="features-label-bold">
@@ -60,25 +55,7 @@ function MacbookFeatures() {
                       <br />
                       {item.desc}
                     </p>
-                    {outerIndex === 2 || (
-                      <div className="features-badge-line"></div>
-                    )}
-                  </div>
-                ) : (
-                  <div
-                    key={`feature-item-${innerIndex}`}
-                    className="features-item-right"
-                  >
-                    <p className="features-label">
-                      <span className="features-label-bold">
-                        {item.feature}
-                      </span>
-                      <br />
-                      {item.desc}
-                    </p>
-                    {outerIndex === 2 || (
-                      <div className="features-badge-line"></div>
-                    )}
+                    {outer || <div className="features-badge-line"></div>}
                   </div>
                 );
               })}
@@ -87,6 +64,7 @@ function MacbookFeatures() {
         })}
       </div>
       <video
+        muted
         ref={(el) => (featuresVideo = el)}
         className="features-video"
         src="https://www.apple.com/105/media/us/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/anim/hero_stats/large_2x.mp4"

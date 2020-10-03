@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useCallback } from "react";
-import "../styles/MacbookScroll.scss";
+import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import "../styles/MacbookIntro.scss";
 
 import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
@@ -20,7 +21,7 @@ function MacbookScroll() {
   let scrollContent = useRef(null);
 
   useEffect(() => {
-    gsap.to(".macbook-scroll", { visibility: "visible" });
+    gsap.to(".macbookPro-intro", { visibility: "visible" });
     //landing animation
     let landingAnim = gsap.timeline();
     landingAnim
@@ -44,6 +45,7 @@ function MacbookScroll() {
         { y: 0, opacity: 1, duration: 1.5 },
         0
       );
+
     //local Navbar
     let localNavAnim = gsap.timeline();
     localNavAnim.to(localNavContainer, {
@@ -55,8 +57,10 @@ function MacbookScroll() {
         end: "bottom bottom",
         // markers: true,
         pin: true,
+        pinSpacing: false,
       },
     });
+
     //macbook canvas
     const macbookContext = macbookCanvas.getContext("2d");
     const macbookImages = [];
@@ -75,16 +79,15 @@ function MacbookScroll() {
     let macbookContainerAnim = gsap.timeline({
       scrollTrigger: {
         trigger: macbookContainer,
-        start: "top +=120px",
-        end: "bottom-=40% +=50%",
+        start: "top+=130px top+=170px",
+        end: "bottom bottom",
         scrub: 0.6,
-        // markers: true,
+        markers: true,
         pin: true,
-        pinSpacing: false,
       },
     });
     macbookContainerAnim
-      .to(macbookTitle, { y: -20, opacity: 0, duration: 0.5 })
+      .to(macbookTitle, { top: "-19%", opacity: 0, duration: 1 })
       .to(
         macbookObj,
         {
@@ -93,24 +96,27 @@ function MacbookScroll() {
           onUpdate: render,
           duration: 2.5,
         },
-        0
+        "<"
       );
 
     macbookImages[0].onload = render;
   }, []);
 
   return (
-    <div className="macbook-scroll">
-      <div ref={(el) => (localNavContainer = el)} className="ln-container">
-        <div className="ln-content">
-          <div className="ln-title">
+    <div className="macbookPro-intro">
+      <div
+        ref={(el) => (localNavContainer = el)}
+        className="intro-ln-container"
+      >
+        <div className="intro-ln-content">
+          <div className="intro-ln-title">
             <a href="#">
               MacBook&nbsp;Pro
               <span>16 吋機型</span>
             </a>
           </div>
-          <div className="ln-menu">
-            <div className="ln-menu-tray">
+          <div className="intro-ln-menu">
+            <div className="intro-ln-menu-tray">
               <ul>
                 <li>
                   <span>概覽</span>
@@ -120,16 +126,22 @@ function MacbookScroll() {
                 </li>
               </ul>
             </div>
-            <div className="ln-actions">
-              <div className="ln-action-button">
+            <div className="intro-ln-action">
+              <div className="intro-ln-action-button">
                 <span>購買</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div ref={(el) => (macbookContainer = el)} className="macbook-container">
-        <div ref={(el) => (macbookTitle = el)} className="macbook-title">
+      <div
+        ref={(el) => (macbookContainer = el)}
+        className="macbookPro-intro-content"
+      >
+        <div
+          ref={(el) => (macbookTitle = el)}
+          className="macbookPro-intro-title"
+        >
           <h1 ref={(el) => (macbookTitleH1 = el)}>Macbook Pro</h1>
           <h2 ref={(el) => (macbookTitleH2 = el)}>
             最強大，
@@ -137,22 +149,36 @@ function MacbookScroll() {
             速配最強者。
           </h2>
         </div>
-        <canvas
-          className="macbook-canvas"
-          width={1096}
-          height={900}
-          ref={(el) => (macbookCanvas = el)}
-        />
-        <div
-          ref={(el) => (scrollContent = el)}
-          className="scroll-section-content"
-        >
-          <p>
-            全新 MacBook&nbsp;Pro
-            專為挑戰極限、改變世界的你而設計，是我們迄今所打造最強大的筆記型電腦。配備引人入勝的
-            16 吋 Retina 顯示器、超高速處理器、新一代繪圖處理、MacBook&nbsp;Pro
-            歷來最大的電池容量，以及全新巧控鍵盤與龐大的儲存容量，這正是為強者而生，最極致的專業筆電。
-          </p>
+        <div className="macbookPro-intro-anim">
+          <canvas
+            className="macbookPro-intro-canvas"
+            width={1096}
+            height={900}
+            ref={(el) => (macbookCanvas = el)}
+          />
+          <div
+            ref={(el) => (scrollContent = el)}
+            className="macbookPro-intro-desc"
+          >
+            <p className="macbookPro-intro-desc-content">
+              全新 MacBook&nbsp;Pro
+              專為挑戰極限、改變世界的你而設計，是我們迄今所打造最強大的筆記型電腦。配備引人入勝的
+              16 吋 Retina
+              顯示器、超高速處理器、新一代繪圖處理、MacBook&nbsp;Pro
+              歷來最大的電池容量，以及全新巧控鍵盤與龐大的儲存容量，這正是為強者而生，最極致的專業筆電。
+            </p>
+            <p className="macbookPro-intro-video">
+              <a
+                target="_blank"
+                href="https://www.apple.com/105/media/tw/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/films/product/macbookpro-16-product-tpl-tw-2019_1280x720h.mp4"
+                aria-label="觀看 MacBook Pro 16 吋影片"
+                role="button"
+              >
+                <span>觀看影片</span>
+                <PlayCircleOutlineIcon />
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

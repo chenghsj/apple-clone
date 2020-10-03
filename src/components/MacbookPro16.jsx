@@ -1,13 +1,15 @@
 import React from "react";
-import MacbookScroll from "./MacbookScroll";
+import MacbookIntro from "./MacbookIntro";
 import MacbookFeatures from "./MacbookFeatures";
+import MacbookRetina from "./MacbookRetina";
 
 function MacbookPro16() {
   return (
-    <div>
-      <MacbookScroll />
+    <React.Fragment>
+      <MacbookIntro />
       <MacbookFeatures />
-    </div>
+      <MacbookRetina />
+    </React.Fragment>
   );
 }
 
