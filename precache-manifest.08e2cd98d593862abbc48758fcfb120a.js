@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03f4a4b568bb4d2f9997f9b31499397d",
+    "revision": "2caa141824427d33dc784918fc3fc5d3",
     "url": "/apple-clone/index.html"
   },
   {
-    "revision": "4e25b43921c933d9aa83",
-    "url": "/apple-clone/static/css/main.de97cfc6.chunk.css"
+    "revision": "9873ed41ef218cd06e8c",
+    "url": "/apple-clone/static/css/main.f4446504.chunk.css"
   },
   {
     "revision": "e81b337f0ce3ba382eba",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/apple-clone/static/js/2.1f22c019.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e25b43921c933d9aa83",
-    "url": "/apple-clone/static/js/main.c8c37a9e.chunk.js"
+    "revision": "9873ed41ef218cd06e8c",
+    "url": "/apple-clone/static/js/main.404b844c.chunk.js"
   },
   {
     "revision": "7bb73c959775184339fe",
