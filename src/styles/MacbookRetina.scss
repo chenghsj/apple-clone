@@ -4,7 +4,8 @@
 
 .sticky-container {
     position: relative;
-    height: 200vh;
+    height: 250vh;
+    overflow: hidden;
 }
 
 .pro-quote {
@@ -14,10 +15,10 @@
     margin: 0 auto;
     margin-bottom: 25px;
     width: 770px;
-    color: white;
 
     p {
         text-align: center;
+        color: #fff;
     }
 }
 
