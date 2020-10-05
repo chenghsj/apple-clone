@@ -1,12 +1,22 @@
 .App {
-  text-align: center;
-  width: 100vw;
-  /* height: 500vh; */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  overflow: auto
+  overflow: auto;
+}
+
+#ac-globalnav,
+.ac-gn-content,
+.ac-ln-content {
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 980px;
+  padding: 0 22px;
+  position: relative;
+  z-index: 2;
+  padding-left: calc(22px + constant(safe-area-inset-left));
+  padding-right: calc(22px + constant(safe-area-inset-right));
 }
 
 .section {
@@ -27,20 +37,37 @@
   margin-bottom: 100px;
 }
 
-.typography-section-headline {
-  font-size: 80px;
-  line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -.015em;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+.section-eyebrow {
+  color: #acacac;
 }
 
-.typography-section-headline.section-eyebrow {
-  color: #acacac;
+.section-intro {
+  padding-right: 48px;
+}
+
+.typography-section-headline {
+  font-size: 72px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.typography-section-intro {
+  font-size: 32px;
+  line-height: 1.26667;
+  font-weight: 600;
+  letter-spacing: 0em;
+  color: #888;
 }
 
 .section-retina .section-headline {
   margin-right: -32px;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .nowrap {

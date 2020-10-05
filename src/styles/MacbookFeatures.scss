@@ -19,7 +19,6 @@
 .features-row {
     width: 100%;
     display: flex;
-    text-align: left;
 
     .features-item-left {
         width: 33%;
@@ -32,14 +31,13 @@
 }
 
 .features-label {
-    font-size: 24px;
-    line-height: 1.16667;
+    font-size: 22px;
+    line-height: 1.26667;
     font-weight: 600;
     letter-spacing: 0.009em;
     color: #888;
 
     span {
-        font-weight: 700;
         color: #000;
     }
 }

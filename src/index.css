@@ -45,11 +45,13 @@
 }
 
 * {
-  font-family: "San Francisco";
+  font-family: "SF Pro TC", "SF Pro Display", "SF Pro Icons", "San Francisco", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  ;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 1em;
+  text-align: left;
 }
 
 h1 {
@@ -84,4 +86,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  background-color: #fff;
+  color: #1d1d1f;
+  font-style: normal;
 }

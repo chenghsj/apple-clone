@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef } from "react";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import "../styles/MacbookIntro.scss";
 
@@ -53,8 +53,8 @@ function MacbookScroll() {
         y: 0,
         trigger: localNavContainer,
         start: "top top",
-        endTrigger: "html",
-        end: "bottom bottom",
+        endTrigger: ".body",
+        end: "bottom top",
         // markers: true,
         pin: true,
         pinSpacing: false,
@@ -82,7 +82,7 @@ function MacbookScroll() {
         start: "top+=130px top+=170px",
         end: "bottom bottom",
         scrub: 0.6,
-        markers: true,
+        // markers: true,
         pin: true,
       },
     });
@@ -108,7 +108,7 @@ function MacbookScroll() {
         ref={(el) => (localNavContainer = el)}
         className="intro-ln-container"
       >
-        <div className="intro-ln-content">
+        <div className="intro-ln-content  ac-ln-content">
           <div className="intro-ln-title">
             <a href="#">
               MacBook&nbsp;Pro
@@ -160,16 +160,17 @@ function MacbookScroll() {
             ref={(el) => (scrollContent = el)}
             className="macbookPro-intro-desc"
           >
-            <p className="macbookPro-intro-desc-content">
+            <p className="macbookPro-intro-desc-content typography-section-intro section-intro">
               全新 MacBook&nbsp;Pro
               專為挑戰極限、改變世界的你而設計，是我們迄今所打造最強大的筆記型電腦。配備引人入勝的
               16 吋 Retina
               顯示器、超高速處理器、新一代繪圖處理、MacBook&nbsp;Pro
               歷來最大的電池容量，以及全新巧控鍵盤與龐大的儲存容量，這正是為強者而生，最極致的專業筆電。
             </p>
-            <p className="macbookPro-intro-video">
+            <p className="macbookPro-intro-video bold">
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.apple.com/105/media/tw/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/films/product/macbookpro-16-product-tpl-tw-2019_1280x720h.mp4"
                 aria-label="觀看 MacBook Pro 16 吋影片"
                 role="button"

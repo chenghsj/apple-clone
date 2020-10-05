@@ -2,13 +2,19 @@
     --r-globalnav-height: 48px;
 }
 
-.header-container {
+.header-section {
     background-color: #333333;
-    width: 100vw;
+    width: 100%;
     height: var(--r-globalnav-height);
     position: relative;
     top: 0;
     left: 0;
     z-index: 20;
     display: flex;
+
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
 }

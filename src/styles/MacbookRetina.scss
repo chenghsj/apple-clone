@@ -1,0 +1,136 @@
+.section-sticky-hero {
+    width: 100vw;
+}
+
+.sticky-container {
+    position: relative;
+    height: 200vh;
+}
+
+.pro-quote {
+    margin-bottom: 20px;
+    will-change: opacity;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 770px;
+    color: white;
+
+    p {
+        text-align: center;
+    }
+}
+
+.quote-text {
+    font-weight: 700;
+    line-height: 1.03;
+    font-size: 70px;
+
+    &:before {
+        content: '「';
+    }
+
+    &:after {
+        content: '」';
+        position: absolute;
+    }
+}
+
+.pro-name {
+    color: #000;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center 25%;
+    top: 40%;
+    right: unset;
+    left: 9vw;
+}
+
+.job-title {
+    margin-top: 0;
+    font-size: 0.9em !important;
+}
+
+.text-container {
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    top: 42%;
+    display: flex;
+}
+
+
+.typography-eyebrow-elevated {
+    font-size: 28px;
+    line-height: 2.2;
+    font-weight: 600;
+    letter-spacing: 0em;
+}
+
+.typography-body {
+    margin-top: 0.7em;
+    line-height: 0.8;
+    font-size: 1.1em;
+}
+
+// .zoom {
+//     height: 250vh;
+// }
+
+.component-container {
+    // overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+}
+
+.hardware-blend {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.figure-image {
+    width: 100%;
+    height: 100%;
+    background-size: 100vw 100vw * 1600 / 2560;
+    background-repeat: no-repeat;
+}
+
+// resolution 2560 * 1600
+.to-image {
+    position: absolute;
+    background-position: top;
+    background-image: url('https://www.apple.com/v/macbook-pro-16/b/images/overview/display_pro__9ci00tik8gyi_large_2x.jpg');
+    z-index: 3;
+}
+
+.macbook-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 1136px;
+    height: 667px;
+    background-position: center center;
+    background-size: 1136px 667px;
+    background-image: url('https://www.apple.com/v/macbook-pro-16/b/images/overview/display_hero_hw__d73ne9vbdmgm_large_2x.jpg');
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.from-image {
+    width: calc(1136px - 248px);
+    height: calc(667px - 110px);
+    background-size: calc(1136px - 248px) calc(667px - 110px);
+    background-image: url('https://www.apple.com/v/macbook-pro-16/b/images/overview/display_hero_screen__eik3891ojtoy_large_2x.jpg');
+    position: relative;
+    top: 29px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 1;
+}

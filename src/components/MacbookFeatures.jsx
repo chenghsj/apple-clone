@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/MacbookFeatures.scss";
 
 import { gsap, ScrollTrigger, Power2 } from "gsap/all";
@@ -48,7 +48,7 @@ function MacbookFeatures() {
                     key={`feature-item-${innerIndex}`}
                     className={`features-item-${inner ? "left" : "right"}`}
                   >
-                    <p className="features-label">
+                    <p className="features-label bold">
                       <span className="features-label-bold">
                         {item.feature}
                       </span>
