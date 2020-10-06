@@ -21,19 +21,18 @@ function MacbookRetina() {
       scrollTrigger: {
         trigger: componentContainer,
         scrub: 0.2,
-        start: "top-=40% top",
+        start: "top-=45% top",
         end: "bottom bottom",
         // markers: true,
+        onUpdate: (el) => {
+          console.log(el);
+        },
       },
     });
     toImageAnim.fromTo(
       hardwareBlend,
-      {
-        clipPath: "polygon(16% 0%, 84% 0%, 84% 100%, 16% 100%)",
-      },
-      {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      }
+      { clipPath: "inset(0% 16%)" },
+      { clipPath: "inset(0% 0%)" }
     );
 
     let hardwareBlendAnim = gsap.timeline({
@@ -49,24 +48,14 @@ function MacbookRetina() {
     });
     hardwareBlendAnim
       .set(macbookImg, { scale: hardwareRatio })
-      .fromTo(
-        proName,
-        { opacity: 0 },
-        { opacity: 1, delay: 0.2, duration: 0.5 }
-      )
+      .fromTo(proName, { opacity: 0 }, { opacity: 1, duration: 0.5 })
       .fromTo(
         toImage,
-        {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        },
-        {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-          duration: 2,
-          delay: 0.5,
-        }
+        { clipPath: "inset(0% 0%)" },
+        { clipPath: "inset(0% 0% 100% 0%)", duration: 2, delay: 0.5 }
       )
-      .to(proName, { opacity: 0, duration: 0.1 }, "<1")
-      .fromTo(proQuote, { opacity: 0 }, { opacity: 1, duration: 0.15 }, "<0.8")
+      .to(proName, { opacity: 0, duration: 0.1 }, "<0.6")
+      .fromTo(proQuote, { opacity: 0 }, { opacity: 1, duration: 0.15 }, "<0.6")
       .to(proQuote, { scale: 0.8, opacity: 0, duration: 0.3, delay: 0.5 })
       .to(macbookImg, { scale: 1, top: "50%" }, "<");
 
@@ -97,21 +86,6 @@ function MacbookRetina() {
 
       <div className="section-sticky-hero">
         <div className="sticky-container">
-          {/* <div className="text-block-1-container">
-            <div className="text-block-1 section-content">
-              <div className="pro-quote">
-                <p className="typography-headline">
-                  <span className="nowrap">極限</span>就是用來
-                  <span className="nowrap">挑戰的。</span>
-                </p>
-                <p className="quote-name typography-body bold">Chris Burkard</p>
-              </div>
-              <div className="pro-name">
-                <p className="typography-body bold">Chris Burkard</p>
-                <p className="typography-body job-title">探險攝影師</p>
-              </div>
-            </div>
-          </div> */}
           <div
             ref={(el) => (componentContainer = el)}
             className="component-container"
