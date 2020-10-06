@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/apple-clone/static/css/main.5598023b.chunk.css",
-    "main.js": "/apple-clone/static/js/main.ba6987dd.chunk.js",
-    "main.js.map": "/apple-clone/static/js/main.ba6987dd.chunk.js.map",
+    "main.js": "/apple-clone/static/js/main.c20d3287.chunk.js",
+    "main.js.map": "/apple-clone/static/js/main.c20d3287.chunk.js.map",
     "runtime-main.js": "/apple-clone/static/js/runtime-main.775e4c48.js",
     "runtime-main.js.map": "/apple-clone/static/js/runtime-main.775e4c48.js.map",
     "static/js/2.1f22c019.chunk.js": "/apple-clone/static/js/2.1f22c019.chunk.js",
     "static/js/2.1f22c019.chunk.js.map": "/apple-clone/static/js/2.1f22c019.chunk.js.map",
     "index.html": "/apple-clone/index.html",
-    "precache-manifest.4b79a538d50031e3b447b0929f1a5ac9.js": "/apple-clone/precache-manifest.4b79a538d50031e3b447b0929f1a5ac9.js",
+    "precache-manifest.5ec32011dd0d79db430631dba572249e.js": "/apple-clone/precache-manifest.5ec32011dd0d79db430631dba572249e.js",
     "service-worker.js": "/apple-clone/service-worker.js",
     "static/css/main.5598023b.chunk.css.map": "/apple-clone/static/css/main.5598023b.chunk.css.map",
     "static/js/2.1f22c019.chunk.js.LICENSE.txt": "/apple-clone/static/js/2.1f22c019.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.775e4c48.js",
     "static/js/2.1f22c019.chunk.js",
     "static/css/main.5598023b.chunk.css",
-    "static/js/main.ba6987dd.chunk.js"
+    "static/js/main.c20d3287.chunk.js"
   ]
 }
